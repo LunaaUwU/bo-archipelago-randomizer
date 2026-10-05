@@ -6,4 +6,4 @@ src/BoRandomizer/.vs/
 *.user
 
 # APWorld
-APWorld/Bo/.vscode/
+*.vscode/
