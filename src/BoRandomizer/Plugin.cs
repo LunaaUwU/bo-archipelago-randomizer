@@ -3,15 +3,18 @@ using BepInEx.Logging;
 
 namespace BoRandomizer;
 
-[BepInPlugin(MyPluginInfo.PLUGIN_GUID, MyPluginInfo.PLUGIN_NAME, MyPluginInfo.PLUGIN_VERSION)]
+[BepInPlugin(PluginGuid, PluginName, PluginVersion)]
 public class Plugin : BaseUnityPlugin
 {
+    public const string PluginGuid = "luna.bo.randomizer";
+    public const string PluginName = "Archipelago Randomizer";
+    public const string PluginVersion = "0.0.1";
     internal static new ManualLogSource Logger;
-        
+
     private void Awake()
     {
         // Plugin startup logic
         Logger = base.Logger;
-        Logger.LogInfo($"Plugin {MyPluginInfo.PLUGIN_GUID} is loaded!");
+        Logger.LogInfo($"Plugin {PluginGuid} is loaded!");
     }
 }

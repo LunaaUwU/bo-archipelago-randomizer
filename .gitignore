@@ -4,3 +4,6 @@ src/BoRandomizer/lib/
 src/BoRandomizer/obj/
 src/BoRandomizer/.vs/
 *.user
+
+# APWorld
+APWorld/Bo/.vscode/
