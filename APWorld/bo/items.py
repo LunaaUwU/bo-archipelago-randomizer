@@ -20,7 +20,7 @@ DEFAULT_ITEM_CLASSIFICATIONS = {
 class BoItem(Item):
     game = "Bo"
 
-def get_random_item_filler(world: BoWorld) -> str:
+def get_random_filler_item_name(world: BoWorld) -> str:
     return "fox_fire_30"
 
 def create_item_with_correct_classification(world: BoWorld, name: str) -> BoItem:

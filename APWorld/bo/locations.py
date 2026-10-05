@@ -34,7 +34,11 @@ def create_regular_locations(world: BoWorld) -> None:
     )
 
     if world.options.test:
-        forest_locations.append("kodama_forest_1")
+        test_locations = get_location_names_with_ids(
+            ["kodama_forest_1"]
+        )
+
+        forest_locations.update(test_locations)
 
     forest.add_locations(forest_locations, BoLocation)
 

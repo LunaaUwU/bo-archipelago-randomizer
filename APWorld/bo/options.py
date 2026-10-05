@@ -2,7 +2,7 @@ from dataclasses import dataclass
 
 from Options import Choice, OptionGroup, PerGameCommonOptions, Range, Toggle
 
-def Test(Toggle):
+class Test(Toggle):
     """
     Test toggle option.
     """

@@ -14,7 +14,7 @@ def create_and_connect_regions(world: BoWorld) -> None:
 def create_all_regions(world: BoWorld) -> None:
     forest = Region("forest", world.player, world.multiworld)
 
-    regions: list[Region] = [forest]
+    regions = [forest]
 
     world.multiworld.regions += regions
 

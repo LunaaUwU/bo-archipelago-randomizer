@@ -2,7 +2,7 @@ from __future__ import annotations
 
 from typing import TYPE_CHECKING
 
-from rule_builder import Has
+from rule_builder.rules import Has
 
 if TYPE_CHECKING:
     from .world import BoWorld
@@ -29,4 +29,4 @@ def set_all_location_rules(world: BoWorld) -> None:
 
 
 def set_completion_condition(world: BoWorld) -> None:
-    world.set_completion_rule(Has("Victory"))
+    world.set_completion_rule(Has("victory"))
