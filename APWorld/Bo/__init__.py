@@ -1,1 +1,0 @@
-from .world import BoWorld as BoWorld
