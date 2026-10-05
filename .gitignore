@@ -1,0 +1,6 @@
+# Plugin
+src/BoRandomizer/bin/
+src/BoRandomizer/lib/
+src/BoRandomizer/obj/
+src/BoRandomizer/.vs/
+*.user
