@@ -9,9 +9,9 @@ namespace BoRandomizer;
 [BepInPlugin(PluginGuid, PluginName, PluginVersion)]
 public class Plugin : BaseUnityPlugin
 {
-    public const string PluginGuid = "luna.bo.randomizer";
-    public const string PluginName = "Archipelago Randomizer";
-    public const string PluginVersion = "0.0.1";
+    private const string PluginGuid = "luna.bo.randomizer";
+    private const string PluginName = "Archipelago Randomizer";
+    private const string PluginVersion = "0.0.1";
     internal static new ManualLogSource Log;
 
     private Harmony harmony = null!;
@@ -19,6 +19,7 @@ public class Plugin : BaseUnityPlugin
 
     private void Awake()
     {
+        Instance = this;
         Log = Logger;
         DontDestroyOnLoad(gameObject);
         Harmony.CreateAndPatchAll(typeof(Plugin));
