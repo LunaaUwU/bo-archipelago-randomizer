@@ -13,8 +13,6 @@ public class Plugin : BaseUnityPlugin
     private const string PluginName = "Archipelago Randomizer";
     private const string PluginVersion = "0.0.1";
     internal static new ManualLogSource Log;
-
-    private Harmony harmony = null!;
     public static Plugin Instance = null!;
 
     private void Awake()
