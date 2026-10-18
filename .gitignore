@@ -5,6 +5,7 @@ src/BoRandomizer/obj/
 src/BoRandomizer/.vs/
 src/SaveData/
 src/Assets/
+src/GameInfo/
 *.user
 
 # APWorld
