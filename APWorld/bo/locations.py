@@ -26,25 +26,19 @@ def create_all_locations(world: BoWorld) -> None:
     create_events(world)
 
 def create_regular_locations(world: BoWorld) -> None:
-    forest = world.get_region("forest")
+    crimson_bamboo_forest = world.get_region("crimson_bamboo_forest")
 
     # === REGION LOCS ===
-    forest_locations = get_location_names_with_ids(
+    crimson_bamboo_forest_locations = get_location_names_with_ids(
         ["equinox_staff"]
     )
 
-    if world.options.test:
-        test_locations = get_location_names_with_ids(
-            ["kodama_forest_1"]
-        )
-
-        forest_locations.update(test_locations)
-
-    forest.add_locations(forest_locations, BoLocation)
+    crimson_bamboo_forest.add_locations(crimson_bamboo_forest_locations, BoLocation)
 
 def create_events(world: BoWorld) -> None:
-    forest = world.get_region("forest")
+    pass
+    # crimson_bamboo_forest = world.get_region("crimson_bamboo_forest")
 
-    forest.add_event(
-        "staff_upgrade", "victory", location_type=BoLocation, item_type=items.BoItem
-    )
+    # crimson_bamboo_forest.add_event(
+    #     "staff_upgrade", "victory", location_type=BoLocation, item_type=items.BoItem
+    # )

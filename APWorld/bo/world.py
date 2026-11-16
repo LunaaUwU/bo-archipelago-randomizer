@@ -20,7 +20,7 @@ class BoWorld(World):
     location_name_to_id = locations.LOCATION_NAME_TO_ID
     item_name_to_id = items.ITEM_NAME_TO_ID
 
-    origin_region_name = "forest"
+    origin_region_name = "crimson_bamboo_forest"
 
     def create_regions(self) -> None:
         regions.create_and_connect_regions(self)
@@ -38,7 +38,7 @@ class BoWorld(World):
     def get_filler_item_name(self) -> str:
         return items.get_random_filler_item_name(self)
 
-    def fill_slot_data(self) -> Mapping[str, Any]:
-        return self.options.as_dict(
-            "test"
-        )
+    # def fill_slot_data(self) -> Mapping[str, Any]:
+    #     return self.options.as_dict(
+    #         "test"
+    #     )

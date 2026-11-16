@@ -18,11 +18,6 @@ def set_all_entrance_rules(world: BoWorld) -> None:
     pass
 
 def set_all_location_rules(world: BoWorld) -> None:
-    if world.options.test:
-        world.set_rule(
-            world.get_location("kodama_forest_1"), HAS_STAFF
-        )
-
     world.set_rule(
         world.get_location("staff_upgrade"), HAS_STAFF
     )
