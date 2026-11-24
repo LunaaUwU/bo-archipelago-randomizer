@@ -1,25 +1,19 @@
 from __future__ import annotations
 
-from typing import TYPE_CHECKING
+from typing import TYPE_CHECKING, NamedTuple
 
 from BaseClasses import ItemClassification, Location
 
 from . import items
+from data.location_ids import LOCATIONS_BY_REGION
 
 if TYPE_CHECKING:
     from .world import BoWorld
 
 
-LOCATION_NAME_TO_ID = {
-    "equinox_staff": 1,
-    "kodama_forest_1": 2
-}
-
 class BoLocation(Location):
     game = "Bo"
 
-def get_location_names_with_ids(location_names: list[str]) -> dict[str, int | None]:
-    return {location_name: LOCATION_NAME_TO_ID[location_name] for location_name in location_names}
 
 def create_all_locations(world: BoWorld) -> None:
     create_regular_locations(world)
@@ -28,12 +22,6 @@ def create_all_locations(world: BoWorld) -> None:
 def create_regular_locations(world: BoWorld) -> None:
     crimson_bamboo_forest = world.get_region("crimson_bamboo_forest")
 
-    # === REGION LOCS ===
-    crimson_bamboo_forest_locations = get_location_names_with_ids(
-        ["equinox_staff"]
-    )
-
-    crimson_bamboo_forest.add_locations(crimson_bamboo_forest_locations, BoLocation)
 
 def create_events(world: BoWorld) -> None:
     pass
