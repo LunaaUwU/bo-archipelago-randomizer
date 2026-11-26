@@ -1,0 +1,1 @@
+- Fix Moro's Missing Monkeys Quest Trigger
